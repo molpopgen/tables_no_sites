@@ -43,4 +43,6 @@ main(int argc, char **argv)
     code = tsk_treeseq_init(&ts, &tables, 0);
     check_tsk_error(code);
     tsk_treeseq_dump(&ts, "no_states.trees", 0);
+    tsk_treeseq_free(&ts);
+    tsk_table_collection_free(&tables);
 }
